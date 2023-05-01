@@ -1,0 +1,144 @@
+																								Table Name: global		 Parent Name: None
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+arr                 array(50, int)                                              0                   200                 NULL                
+c                   char                                    'v'                 200                 1                   NULL                
+d                   char                                    'i'                 201                 1                   NULL                
+fib                 function                                                    202                 4                   fib                 
+i                   int                                                         206                 4                   NULL                
+main                function                                                    210                 0                   main                
+t0                  int                                     50                  210                 4                   NULL                
+t1                  char                                    'v'                 214                 1                   NULL                
+t2                  char                                    'i'                 215                 1                   NULL                
+
+
+
+Table Name: fib		 Parent Name: global
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+n                   int                                                         0                   4                   NULL                
+return              int                                                         4                   4                   NULL                
+t10                 int                                                         8                   4                   NULL                
+t11                 int                                     1                   12                  4                   NULL                
+t12                 int                                                         16                  4                   NULL                
+t13                 int                                                         20                  4                   NULL                
+t14                 int                                     2                   24                  4                   NULL                
+t15                 int                                                         28                  4                   NULL                
+t16                 int                                                         32                  4                   NULL                
+t17                 int                                                         36                  4                   NULL                
+t3                  int                                     1                   40                  4                   NULL                
+t4                  int                                                         44                  4                   NULL                
+t5                  int                                                         48                  4                   NULL                
+t6                  int                                     1                   52                  4                   NULL                
+t7                  int                                                         56                  4                   NULL                
+t8                  int                                                         60                  4                   NULL                
+t9                  int                                                         64                  4                   NULL                
+
+
+
+Table Name: main		 Parent Name: global
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+main_0              block                                                       0                   4                   main_0              
+res                 char                                                        4                   1                   NULL                
+t18                 int                                     0                   5                   4                   NULL                
+t19                 int                                     50                  9                   4                   NULL                
+t20                 int                                                         13                  4                   NULL                
+t24                 int                                     0                   17                  4                   NULL                
+t25                 int                                                         21                  4                   NULL                
+t26                 int                                     1                   25                  4                   NULL                
+t27                 int                                                         29                  4                   NULL                
+t28                 int                                     0                   33                  4                   NULL                
+t29                 int                                     32                  37                  4                   NULL                
+t30                 int                                                         41                  4                   NULL                
+t31                 int                                     2                   45                  4                   NULL                
+t32                 int                                                         49                  4                   NULL                
+t33                 int                                     1                   53                  4                   NULL                
+t34                 int                                     100                 57                  4                   NULL                
+t35                 int                                     0                   61                  4                   NULL                
+x                   int                                                         65                  4                   NULL                
+
+
+
+Table Name: main_0		 Parent Name: main
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+t21                 int                                                         0                   4                   NULL                
+t22                 int                                     1                   4                   4                   NULL                
+t23                 int                                                         8                   4                   NULL                
+
+
+
+1   : 	t0 = 50
+2   : 	t1 = 'v'
+3   : 	c = t1
+4   : 	t2 = 'i'
+5   : 	d = t2
+6   : fib
+7   : fib
+8   : 	t3 = 1
+9   : 	if n <= t3 goto 11
+10  : 	goto 13
+11  : 	return n
+12  : 	goto 
+13  : 	t4 = n * 4
+14  : 	t5 = arr[t4]
+15  : 	t6 = 1
+16  : 	t7 = t6 - 
+17  : 	if t5 != t7 goto 19
+18  : 	goto 23
+19  : 	t8 = n * 4
+20  : 	t9 = arr[t8]
+21  : 	return t9
+22  : 	goto 
+23  : 	t10 = n * 4
+24  : 	t11 = 1
+25  : 	t12 = n - t11
+26  : 	param t12
+27  : 	t13 = call fib, 1
+28  : 	t14 = 2
+29  : 	t15 = n - t14
+30  : 	param t15
+31  : 	t16 = call fib, 1
+32  : 	t17 = t13 + t16
+33  : 	arr[t10] = t17
+34  : 	return t17
+35  : main
+36  : 	t18 = 0
+37  : 	i = t18
+38  : 	t19 = 50
+39  : 	if i < t19 goto 44
+40  : 	goto 50
+41  : 	t20 = i
+42  : 	i = i + 1
+43  : 	goto 38
+44  : main_0
+45  : 	t21 = i * 4
+46  : 	t22 = 1
+47  : 	t23 = t22 - 
+48  : 	arr[t21] = t23
+49  : 	goto 41
+50  : 	t24 = 0
+51  : 	t25 = t24 * 4
+52  : 	t26 = 1
+53  : 	t27 = t26 * 4
+54  : 	t28 = 0
+55  : 	arr[t27] = t28
+56  : 	arr[t25] = t28
+57  : 	t29 = 32
+58  : 	param t29
+59  : 	t30 = call fib, 1
+60  : 	x = t30
+61  : 	t31 = 2
+62  : 	t32 = x % t31
+63  : 	t33 = 1
+64  : 	if t32 == t33 goto 66
+65  : 	goto 71
+66  : 	t34 = 100
+67  : 	if x > t34 goto 69
+68  : 	goto 71
+69  : 	res = c
+70  : 	goto 72
+71  : 	res = d
+72  : 	t35 = 0
+73  : 	return t35

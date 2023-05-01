@@ -1,0 +1,91 @@
+																									Table Name: global		 Parent Name: None
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+func                function                                                    0                   0                   func                
+main                function                                                    0                   4                   main                
+
+
+
+Table Name: func		 Parent Name: global
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+a                   ptr(int)                                                    0                   4                   NULL                
+t0                  int                                                         4                   4                   NULL                
+t1                  int                                                         8                   4                   NULL                
+t2                  int                                                         12                  4                   NULL                
+x                   int                                                         16                  4                   NULL                
+
+
+
+Table Name: main		 Parent Name: global
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+a                   ptr(int)                                                    0                   4                   NULL                
+main_0              block                                                       4                   4                   main_0              
+main_1              block                                                       8                   4                   main_1              
+return              int                                                         12                  4                   NULL                
+t10                 int                                     96                  16                  4                   NULL                
+t13                 int                                                         20                  4                   NULL                
+t14                 float                                                       24                  8                   NULL                
+t3                  int                                     2                   32                  4                   NULL                
+t4                  int                                     10                  36                  4                   NULL                
+t5                  float                                   0.625               40                  8                   NULL                
+t6                  int                                                         48                  4                   NULL                
+t9                  int                                                         52                  4                   NULL                
+x                   int                                     2                   56                  4                   NULL                
+y                   int                                     10                  60                  4                   NULL                
+z                   float                                   0.625               64                  8                   NULL                
+
+
+
+Table Name: main_0		 Parent Name: main
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+t7                  float                                                       0                   8                   NULL                
+t8                  float                                                       8                   8                   NULL                
+
+
+
+Table Name: main_1		 Parent Name: main
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+t11                 void                                                        0                   0                   NULL                
+t12                 int                                                         0                   4                   NULL                
+
+
+
+1   : func
+2   : 	t0 = *a
+3   : 	t1 = *a
+4   : 	t2 = t1 * x
+5   : 	*t0 = t2
+6   : main
+7   : 	t3 = 2
+8   : 	x = t3
+9   : 	t4 = 10
+10  : 	y = t4
+11  : 	t5 = 0.625
+12  : 	z = t5
+13  : 	t6 = y
+14  : 	y = y - 1
+15  : main_0
+16  : 	t7 = Int_TO_Float(x)
+17  : 	t8 = z * t7
+18  : 	z = t8
+19  : 	if t6 == 0 goto 22
+20  : 	goto 15
+21  : 	goto 13
+22  : 	t9 = *a
+23  : 	t10 = 96
+24  : 	*t9 = t10
+25  : main_1
+26  : 	param a
+27  : 	param x
+28  : 	t11 = call func, 2
+29  : 	t12 = x
+30  : 	x = x + 1
+31  : 	t13 = *a
+32  : 	t14 = Int_TO_Float(t13)
+33  : 	if z > t14 goto 25
+34  : 	goto 35
+35  : 	return 

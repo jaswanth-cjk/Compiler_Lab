@@ -1,0 +1,81 @@
+Table Name: global		 Parent Name: None
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+main                function                                                    0                   4                   main                
+
+
+
+Table Name: main		 Parent Name: global
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+a                   int                                     0                   0                   4                   NULL                
+ans                 char                                                        4                   1                   NULL                
+b                   int                                     1                   5                   4                   NULL                
+c                   int                                     2                   9                   4                   NULL                
+d                   int                                     3                   13                  4                   NULL                
+main_0              block                                                       17                  4                   main_0              
+main_1              block                                                       21                  4                   main_1              
+return              int                                                         25                  4                   NULL                
+t0                  int                                     0                   29                  4                   NULL                
+t1                  int                                     1                   33                  4                   NULL                
+t11                 int                                     0                   37                  4                   NULL                
+t2                  int                                     2                   41                  4                   NULL                
+t3                  int                                     3                   45                  4                   NULL                
+t4                  int                                                         49                  4                   NULL                
+t5                  int                                                         53                  4                   NULL                
+t6                  int                                                         57                  4                   NULL                
+
+
+
+Table Name: main_0		 Parent Name: main
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+t7                  char                                    'c'                 0                   1                   NULL                
+t8                  char                                    'd'                 1                   1                   NULL                
+
+
+
+Table Name: main_1		 Parent Name: main
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+t10                 char                                    'b'                 0                   1                   NULL                
+t9                  char                                    'a'                 1                   1                   NULL                
+
+
+
+1   : main
+2   : 	t0 = 0
+3   : 	a = t0
+4   : 	t1 = 1
+5   : 	b = t1
+6   : 	t2 = 2
+7   : 	c = t2
+8   : 	t3 = 3
+9   : 	d = t3
+10  : 	t4 = b ^ d
+11  : 	c = t4
+12  : 	t5 = c & d
+13  : 	b = t5
+14  : 	t6 = b | c
+15  : 	a = t6
+16  : 	if a > b goto 18
+17  : 	goto 27
+18  : main_0
+19  : 	if c > d goto 21
+20  : 	goto 24
+21  : 	t7 = 'c'
+22  : 	ans = t7
+23  : 	goto 35
+24  : 	t8 = 'd'
+25  : 	ans = t8
+26  : 	goto 35
+27  : main_1
+28  : 	if c > d goto 30
+29  : 	goto 33
+30  : 	t9 = 'a'
+31  : 	ans = t9
+32  : 	goto 35
+33  : 	t10 = 'b'
+34  : 	ans = t10
+35  : 	t11 = 0
+36  : 	return t11

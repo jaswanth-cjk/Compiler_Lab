@@ -1,0 +1,16 @@
+asgn4_20CS10021_20CS30051.txt: asgn4_20CS30051_20CS10021 asgn4_20CS10021_20CS30051_test.c
+	./asgn4_20CS30051_20CS10021 < asgn4_20CS10021_20CS30051_test.c > asgn4_20CS10021_20CS30051.txt
+
+asgn4_20CS30051_20CS10021: lex.yy.c asgn4_20CS10021_20CS30051.c y.tab.c
+	gcc lex.yy.c asgn4_20CS10021_20CS30051.c y.tab.c -o asgn4_20CS30051_20CS10021
+
+lex.yy.c: asgn4_20CS10021_20CS30051.l y.tab.h
+	flex asgn4_20CS10021_20CS30051.l
+
+y.tab.c y.tab.h: asgn4_20CS10021_20CS30051.y
+	bison -dty asgn4_20CS10021_20CS30051.y
+
+asgn4_20CS10021_20CS30051.c: ;
+
+clean:
+	rm asgn4_20CS30051_20CS10021 lex.yy.* y.tab.*

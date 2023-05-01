@@ -1,0 +1,112 @@
+																																		Table Name: global		 Parent Name: None
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+func                function                                                    0                   4                   func                
+main                function                                                    4                   0                   main                
+
+
+
+Table Name: func		 Parent Name: global
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+i                   int                                                         0                   4                   NULL                
+j                   int                                                         4                   4                   NULL                
+return              int                                                         8                   4                   NULL                
+t0                  int                                                         12                  4                   NULL                
+t1                  int                                                         16                  4                   NULL                
+t2                  int                                     2                   20                  4                   NULL                
+t3                  int                                                         24                  4                   NULL                
+t4                  int                                                         28                  4                   NULL                
+x                   int                                                         32                  4                   NULL                
+y                   int                                                         36                  4                   NULL                
+
+
+
+Table Name: main		 Parent Name: global
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+a                   array(25, array(25, int))                                   0                   2500                NULL                
+i                   int                                                         2500                4                   NULL                
+j                   int                                                         2504                4                   NULL                
+main_0              block                                                       2508                4                   main_0              
+t10                 int                                     25                  2512                4                   NULL                
+t11                 int                                     1                   2516                4                   NULL                
+t12                 int                                                         2520                4                   NULL                
+t5                  int                                     5                   2524                4                   NULL                
+t6                  float                                   3.7                 2528                8                   NULL                
+t7                  float                                                       2536                8                   NULL                
+t8                  float                                                       2544                8                   NULL                
+t9                  int                                     25                  2552                4                   NULL                
+x                   int                                     5                   2556                4                   NULL                
+y                   float                                   3.7                 2560                8                   NULL                
+z                   int                                                         2568                4                   NULL                
+
+
+
+Table Name: main_0		 Parent Name: main
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+main_0_1            block                                                       0                   4                   main_0_1            
+t13                 int                                                         4                   4                   NULL                
+
+
+
+Table Name: main_0_1		 Parent Name: main_0
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+t14                 int                                                         0                   4                   NULL                
+t15                 int                                                         4                   4                   NULL                
+t16                 int                                                         8                   4                   NULL                
+t17                 int                                                         12                  4                   NULL                
+
+
+
+1   : func
+2   : 	t0 = j / i
+3   : 	if t0 > y goto 5
+4   : 	goto 8
+5   : 	t1 = x
+6   : 	x = x + 1
+7   : 	goto 12
+8   : 	t2 = 2
+9   : 	t3 = x % t2
+10  : 	t4 = x - t3
+11  : 	x = t4
+12  : 	return x
+13  : main
+14  : 	t5 = 5
+15  : 	x = t5
+16  : 	t6 = 3.7
+17  : 	y = t6
+18  : 	t7 = Int_TO_Float(x)
+19  : 	t8 = y * t7
+20  : 	z = t8
+21  : 	t9 = 25
+22  : 	t10 = 25
+23  : 	t11 = 1
+24  : 	i = t11
+25  : 	if i < z goto 30
+26  : 	goto 49
+27  : 	t12 = i
+28  : 	i = i + 1
+29  : 	goto 25
+30  : main_0
+31  : 	j = z
+32  : 	if j > i goto 37
+33  : 	goto 27
+34  : 	t13 = j
+35  : 	j = j - 1
+36  : 	goto 32
+37  : main_0_1
+38  : 	t14 = i * 100
+39  : 	t16 = j * 4
+40  : 	t15 = t14 + t16
+41  : 	param i
+42  : 	param j
+43  : 	param x
+44  : 	param y
+45  : 	t17 = call func, 4
+46  : 	a[t15] = t17
+47  : 	goto 34
+48  : 	goto 27
+49  : 	return 

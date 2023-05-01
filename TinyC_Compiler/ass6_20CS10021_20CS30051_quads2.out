@@ -1,0 +1,56 @@
+	Error Detected : syntax error
+Table Name: global		 Parent Name: None
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+func                void                                    function                                0                   0                   func                
+printInt            int                                     function                                0                   4                   printInt            
+printStr            int                                     function                                4                   4                   printStr            
+readInt             int                                     function                                8                   4                   readInt             
+
+
+
+Table Name: func		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+a                   ptr(int)                                parameter                               0                   8                   NULL                
+t0                  int                                     temporary                               8                   4                   NULL                
+t1                  int                                     temporary                               12                  4                   NULL                
+t2                  int                                     temporary                               16                  4                   NULL                
+t3                  ptr(char)                               temporary           "New value is :"    20                  8                   NULL                
+t4                  int                                     temporary                               28                  4                   NULL                
+x                   int                                     parameter                               32                  4                   NULL                
+
+
+
+Table Name: printInt		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+n                   int                                     parameter                               0                   4                   NULL                
+return              int                                     local                                   4                   4                   NULL                
+
+
+
+Table Name: printStr		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+return              int                                     local                                   0                   4                   NULL                
+s                   ptr(char)                               parameter                               4                   8                   NULL                
+
+
+
+Table Name: readInt		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+eP                  ptr(int)                                parameter                               0                   8                   NULL                
+return              int                                     local                                   8                   4                   NULL                
+
+
+
+1   : Function start: func
+2   : 	t0 = *a
+3   : 	t1 = *a
+4   : 	t2 = t1 * x
+5   : 	*t0 = t2
+6   : 	t3 = "New value is :"
+7   : 	param t3
+8   : 	t4 = call printStr, 1

@@ -1,0 +1,109 @@
+											Table Name: global		 Parent Name: None
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+func                void                                    function                                0                   0                   func                
+main                void                                    function                                0                   0                   main                
+printInt            int                                     function                                0                   4                   printInt            
+printStr            int                                     function                                4                   4                   printStr            
+readInt             int                                     function                                8                   4                   readInt             
+strPrint            void                                    function                                12                  0                   strPrint            
+
+
+
+Table Name: func		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+a                   ptr(int)                                parameter                               0                   8                   NULL                
+t0                  ptr(char)                               temporary           "\nValue of a[2] is :"8                   8                   NULL                
+t1                  int                                     temporary                               16                  4                   NULL                
+t2                  int                                     temporary           2                   20                  4                   NULL                
+t3                  int                                     temporary                               24                  4                   NULL                
+t4                  int                                     temporary                               28                  4                   NULL                
+t5                  int                                     temporary                               32                  4                   NULL                
+
+
+
+Table Name: main		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+a                   array(20, int)                          local                                   0                   80                  NULL                
+i                   int                                     local                                   80                  4                   NULL                
+t10                 int                                     temporary                               84                  4                   NULL                
+t11                 int                                     temporary                               88                  4                   NULL                
+t12                 ptr(char)                               temporary           "Printing has started."92                  8                   NULL                
+t13                 void                                    temporary                               100                 0                   NULL                
+t14                 void                                    temporary                               100                 0                   NULL                
+t7                  int                                     temporary           20                  100                 4                   NULL                
+t8                  int                                     temporary           0                   104                 4                   NULL                
+t9                  int                                     temporary           20                  108                 4                   NULL                
+x                   ptr(char)                               local               "Printing has started."112                 8                   NULL                
+
+
+
+Table Name: printInt		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+n                   int                                     parameter                               0                   4                   NULL                
+return              int                                     local                                   4                   4                   NULL                
+
+
+
+Table Name: printStr		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+return              int                                     local                                   0                   4                   NULL                
+s                   ptr(char)                               parameter                               4                   8                   NULL                
+
+
+
+Table Name: readInt		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+eP                  ptr(int)                                parameter                               0                   8                   NULL                
+return              int                                     local                                   8                   4                   NULL                
+
+
+
+Table Name: strPrint		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+s                   ptr(char)                               parameter                               0                   8                   NULL                
+t6                  int                                     temporary                               8                   4                   NULL                
+
+
+
+1   : Function start: func
+2   : 	t0 = "\nValue of a[2] is :"
+3   : 	param t0
+4   : 	t1 = call printStr, 1
+5   : 	t2 = 2
+6   : 	t3 = t2 * 4
+7   : 	t4 = a[t3]
+8   : 	param t4
+9   : 	t5 = call printInt, 1
+10  : Function end: func
+11  : Function start: strPrint
+12  : 	param s
+13  : 	t6 = call printStr, 1
+14  : Function end: strPrint
+15  : Function start: main
+16  : 	t7 = 20
+17  : 	t8 = 0
+18  : 	i = t8
+19  : 	t9 = 20
+20  : 	if i < t9 goto 25
+21  : 	goto 28
+22  : 	t10 = i
+23  : 	i = i + 1
+24  : 	goto 19
+25  : 	t11 = i * 4
+26  : 	a[t11] = i
+27  : 	goto 22
+28  : 	t12 = "Printing has started."
+29  : 	x = t12
+30  : 	param x
+31  : 	t13 = call strPrint, 1
+32  : 	param a
+33  : 	t14 = call func, 1
+34  : 	return 
+35  : Function end: main

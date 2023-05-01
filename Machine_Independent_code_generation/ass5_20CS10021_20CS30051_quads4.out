@@ -1,0 +1,93 @@
+reached
+							Table Name: global		 Parent Name: None
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+main                function                                                    0                   4                   main                
+max_area            function                                                    4                   4                   max_area            
+max_mag             function                                                    8                   4                   max_mag             
+
+
+
+Table Name: main		 Parent Name: global
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+return              int                                                         0                   4                   NULL                
+t10                 int                                                         4                   4                   NULL                
+t11                 int                                                         8                   4                   NULL                
+t8                  int                                     7                   12                  4                   NULL                
+t9                  int                                     9                   16                  4                   NULL                
+x                   int                                                         20                  4                   NULL                
+
+
+
+Table Name: max_area		 Parent Name: global
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+a                   int                                                         0                   4                   NULL                
+area                int                                                         4                   4                   NULL                
+b                   int                                                         8                   4                   NULL                
+return              int                                                         12                  4                   NULL                
+side                int                                                         16                  4                   NULL                
+t6                  int                                                         20                  4                   NULL                
+t7                  int                                                         24                  4                   NULL                
+
+
+
+Table Name: max_mag		 Parent Name: global
+Name                Type                                    Initial Value       Offset              Size                Child               
+
+ans                 int                                     0                   0                   4                   NULL                
+return              int                                                         4                   4                   NULL                
+t0                  int                                     0                   8                   4                   NULL                
+t1                  int                                     0                   12                  4                   NULL                
+t2                  int                                                         16                  4                   NULL                
+t3                  int                                     0                   20                  4                   NULL                
+t4                  int                                                         24                  4                   NULL                
+t5                  int                                                         28                  4                   NULL                
+x                   int                                                         32                  4                   NULL                
+y                   int                                                         36                  4                   NULL                
+
+
+
+1   : max_mag
+2   : 	t0 = 0
+3   : 	ans = t0
+4   : 	t1 = 0
+5   : 	if x < t1 goto 7
+6   : 	goto 10
+7   : 	t2 = x - 
+8   : 	x = t2
+9   : 	goto 10
+10  : 	t3 = 0
+11  : 	if y < t3 goto 13
+12  : 	goto 16
+13  : 	t4 = y - 
+14  : 	y = t4
+15  : 	goto 16
+16  : 	if x > y goto 19
+17  : 	goto 20
+18  : 	goto 24
+19  : 	goto 22
+20  : 	t5 = y
+21  : 	goto 24
+22  : 	t5 = x
+23  : 	goto 24
+24  : 	ans = t5
+25  : 	return ans
+26  : max_area
+27  : 	param a
+28  : 	param b
+29  : 	t6 = call max_mag, 2
+30  : 	side = t6
+31  : 	t7 = side * side
+32  : 	area = t7
+33  : 	return area
+34  : main
+35  : 	t8 = 7
+36  : 	param t8
+37  : 	t9 = 9
+38  : 	t10 = t9 - 
+39  : 	param t10
+40  : 	t11 = call max_area, 2
+41  : 	x = t11
+42  : 	return 

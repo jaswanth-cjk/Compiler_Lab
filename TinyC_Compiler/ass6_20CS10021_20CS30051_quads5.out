@@ -1,0 +1,142 @@
+Error Detected : syntax error
+Table Name: global		 Parent Name: None
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+main                int                                     function                                0                   4                   main                
+printInt            int                                     function                                4                   4                   printInt            
+printStr            int                                     function                                8                   4                   printStr            
+readInt             int                                     function                                12                  4                   readInt             
+
+
+
+Table Name: main		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+a                   int                                     local               0                   0                   4                   NULL                
+b                   int                                     local               1                   4                   4                   NULL                
+c                   int                                     local               2                   8                   4                   NULL                
+d                   int                                     local               3                   12                  4                   NULL                
+return              int                                     local                                   16                  4                   NULL                
+t0                  int                                     temporary           0                   20                  4                   NULL                
+t1                  int                                     temporary           1                   24                  4                   NULL                
+t10                 ptr(char)                               temporary           " "                 28                  8                   NULL                
+t11                 int                                     temporary                               36                  4                   NULL                
+t12                 int                                     temporary                               40                  4                   NULL                
+t13                 ptr(char)                               temporary           " "                 44                  8                   NULL                
+t14                 int                                     temporary                               52                  4                   NULL                
+t15                 int                                     temporary                               56                  4                   NULL                
+t16                 int                                     temporary                               60                  4                   NULL                
+t17                 ptr(char)                               temporary           "Value of c is:"    64                  8                   NULL                
+t18                 int                                     temporary                               72                  4                   NULL                
+t19                 int                                     temporary                               76                  4                   NULL                
+t2                  int                                     temporary           2                   80                  4                   NULL                
+t20                 int                                     temporary                               84                  4                   NULL                
+t21                 ptr(char)                               temporary           "Value of b is:"    88                  8                   NULL                
+t22                 int                                     temporary                               96                  4                   NULL                
+t23                 int                                     temporary                               100                 4                   NULL                
+t24                 int                                     temporary                               104                 4                   NULL                
+t25                 ptr(char)                               temporary           "Value of a is:"    108                 8                   NULL                
+t26                 int                                     temporary                               116                 4                   NULL                
+t27                 int                                     temporary                               120                 4                   NULL                
+t28                 int                                     temporary                               124                 4                   NULL                
+t29                 ptr(char)                               temporary           "Value of a is:"    128                 8                   NULL                
+t3                  int                                     temporary           3                   136                 4                   NULL                
+t30                 int                                     temporary                               140                 4                   NULL                
+t31                 int                                     temporary                               144                 4                   NULL                
+t32                 ptr(char)                               temporary           "\na > b"           148                 8                   NULL                
+t33                 int                                     temporary                               156                 4                   NULL                
+t4                  ptr(char)                               temporary           "Values of data is:"160                 8                   NULL                
+t5                  int                                     temporary                               168                 4                   NULL                
+t6                  int                                     temporary                               172                 4                   NULL                
+t7                  ptr(char)                               temporary           " "                 176                 8                   NULL                
+t8                  int                                     temporary                               184                 4                   NULL                
+t9                  int                                     temporary                               188                 4                   NULL                
+
+
+
+Table Name: printInt		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+n                   int                                     parameter                               0                   4                   NULL                
+return              int                                     local                                   4                   4                   NULL                
+
+
+
+Table Name: printStr		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+return              int                                     local                                   0                   4                   NULL                
+s                   ptr(char)                               parameter                               4                   8                   NULL                
+
+
+
+Table Name: readInt		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+eP                  ptr(int)                                parameter                               0                   8                   NULL                
+return              int                                     local                                   8                   4                   NULL                
+
+
+
+1   : Function start: main
+2   : 	t0 = 0
+3   : 	a = t0
+4   : 	t1 = 1
+5   : 	b = t1
+6   : 	t2 = 2
+7   : 	c = t2
+8   : 	t3 = 3
+9   : 	d = t3
+10  : 	t4 = "Values of data is:"
+11  : 	param t4
+12  : 	t5 = call printStr, 1
+13  : 	param a
+14  : 	t6 = call printInt, 1
+15  : 	t7 = " "
+16  : 	param t7
+17  : 	t8 = call printStr, 1
+18  : 	param b
+19  : 	t9 = call printStr, 1
+20  : 	t10 = " "
+21  : 	param t10
+22  : 	t11 = call printStr, 1
+23  : 	param c
+24  : 	t12 = call printInt, 1
+25  : 	t13 = " "
+26  : 	param t13
+27  : 	t14 = call printStr, 1
+28  : 	param d
+29  : 	t15 = call printStr, 1
+30  : 	t16 = b + d
+31  : 	c = t16
+32  : 	t17 = "Value of c is:"
+33  : 	param t17
+34  : 	t18 = call printStr, 1
+35  : 	param a
+36  : 	t19 = call printInt, 1
+37  : 	t20 = c - d
+38  : 	b = t20
+39  : 	t21 = "Value of b is:"
+40  : 	param t21
+41  : 	t22 = call printStr, 1
+42  : 	param a
+43  : 	t23 = call printInt, 1
+44  : 	t24 = b * c
+45  : 	a = t24
+46  : 	t25 = "Value of a is:"
+47  : 	param t25
+48  : 	t26 = call printStr, 1
+49  : 	param a
+50  : 	t27 = call printInt, 1
+51  : 	t28 = a
+52  : 	a = a + 1
+53  : 	t29 = "Value of a is:"
+54  : 	param t29
+55  : 	t30 = call printStr, 1
+56  : 	param a
+57  : 	t31 = call printInt, 1
+58  : 	if a > b goto -1
+59  : 	goto -1
+60  : 	t32 = "\na > b"
+61  : 	param t32
+62  : 	t33 = call printStr, 1

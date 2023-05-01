@@ -1,0 +1,180 @@
+																								Table Name: global		 Parent Name: None
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+arr                 array(50, int)                          local                                   0                   200                 NULL                
+c                   char                                    local               'v'                 200                 1                   NULL                
+d                   char                                    local               'i'                 201                 1                   NULL                
+fib                 int                                     function                                202                 4                   fib                 
+i                   int                                     local                                   206                 4                   NULL                
+main                void                                    function                                210                 0                   main                
+printInt            int                                     function                                210                 4                   printInt            
+printStr            int                                     function                                214                 4                   printStr            
+readInt             int                                     function                                218                 4                   readInt             
+t0                  int                                     temporary           50                  222                 4                   NULL                
+t1                  char                                    temporary           'v'                 226                 1                   NULL                
+t2                  char                                    temporary           'i'                 227                 1                   NULL                
+
+
+
+Table Name: fib		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+n                   int                                     parameter                               0                   4                   NULL                
+return              int                                     local                                   4                   4                   NULL                
+t10                 int                                     temporary                               8                   4                   NULL                
+t11                 int                                     temporary                               12                  4                   NULL                
+t12                 int                                     temporary                               16                  4                   NULL                
+t13                 int                                     temporary                               20                  4                   NULL                
+t14                 int                                     temporary           1                   24                  4                   NULL                
+t15                 int                                     temporary                               28                  4                   NULL                
+t16                 int                                     temporary                               32                  4                   NULL                
+t17                 int                                     temporary           2                   36                  4                   NULL                
+t18                 int                                     temporary                               40                  4                   NULL                
+t19                 int                                     temporary                               44                  4                   NULL                
+t20                 int                                     temporary                               48                  4                   NULL                
+t3                  ptr(char)                               temporary           "\nValue of input is :"52                  8                   NULL                
+t4                  int                                     temporary                               60                  4                   NULL                
+t5                  int                                     temporary                               64                  4                   NULL                
+t6                  int                                     temporary           1                   68                  4                   NULL                
+t7                  int                                     temporary                               72                  4                   NULL                
+t8                  int                                     temporary                               76                  4                   NULL                
+t9                  int                                     temporary           1                   80                  4                   NULL                
+
+
+
+Table Name: main		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+res                 char                                    local                                   0                   1                   NULL                
+t21                 int                                     temporary           0                   1                   4                   NULL                
+t22                 int                                     temporary           50                  5                   4                   NULL                
+t23                 int                                     temporary                               9                   4                   NULL                
+t24                 int                                     temporary                               13                  4                   NULL                
+t25                 int                                     temporary           1                   17                  4                   NULL                
+t26                 int                                     temporary                               21                  4                   NULL                
+t27                 int                                     temporary           0                   25                  4                   NULL                
+t28                 int                                     temporary                               29                  4                   NULL                
+t29                 int                                     temporary           0                   33                  4                   NULL                
+t30                 int                                     temporary           1                   37                  4                   NULL                
+t31                 int                                     temporary                               41                  4                   NULL                
+t32                 int                                     temporary           0                   45                  4                   NULL                
+t33                 int                                     temporary           32                  49                  4                   NULL                
+t34                 int                                     temporary                               53                  4                   NULL                
+t35                 int                                     temporary           2                   57                  4                   NULL                
+t36                 int                                     temporary                               61                  4                   NULL                
+t37                 int                                     temporary           1                   65                  4                   NULL                
+t38                 int                                     temporary           100                 69                  4                   NULL                
+t39                 ptr(char)                               temporary           "Conditionals checked"73                  8                   NULL                
+t40                 int                                     temporary                               81                  4                   NULL                
+t41                 int                                     temporary           0                   85                  4                   NULL                
+x                   int                                     local                                   89                  4                   NULL                
+
+
+
+Table Name: printInt		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+n                   int                                     parameter                               0                   4                   NULL                
+return              int                                     local                                   4                   4                   NULL                
+
+
+
+Table Name: printStr		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+return              int                                     local                                   0                   4                   NULL                
+s                   ptr(char)                               parameter                               4                   8                   NULL                
+
+
+
+Table Name: readInt		 Parent Name: global
+Name                Type                                    Category            Initial Value       Offset              Size                Child               
+
+eP                  ptr(int)                                parameter                               0                   8                   NULL                
+return              int                                     local                                   8                   4                   NULL                
+
+
+
+1   : 	t0 = 50
+2   : 	t1 = 'v'
+3   : 	c = t1
+4   : 	t2 = 'i'
+5   : 	d = t2
+6   : Function start: fib
+7   : Function start: fib
+8   : 	t3 = "\nValue of input is :"
+9   : 	param t3
+10  : 	t4 = call printStr, 1
+11  : 	param n
+12  : 	t5 = call printInt, 1
+13  : 	t6 = 1
+14  : 	if n <= t6 goto 16
+15  : 	goto 18
+16  : 	return n
+17  : 	goto 40
+18  : 	t7 = n * 4
+19  : 	t8 = arr[t7]
+20  : 	t9 = 1
+21  : 	t10 = t9 - 
+22  : 	if t8 != t10 goto 24
+23  : 	goto 28
+24  : 	t11 = n * 4
+25  : 	t12 = arr[t11]
+26  : 	return t12
+27  : 	goto 40
+28  : 	t13 = n * 4
+29  : 	t14 = 1
+30  : 	t15 = n - t14
+31  : 	param t15
+32  : 	t16 = call fib, 1
+33  : 	t17 = 2
+34  : 	t18 = n - t17
+35  : 	param t18
+36  : 	t19 = call fib, 1
+37  : 	t20 = t16 + t19
+38  : 	arr[t13] = t20
+39  : 	return t20
+40  : Function end: fib
+41  : Function start: main
+42  : 	t21 = 0
+43  : 	i = t21
+44  : 	t22 = 50
+45  : 	if i < t22 goto 50
+46  : 	goto 55
+47  : 	t23 = i
+48  : 	i = i + 1
+49  : 	goto 44
+50  : 	t24 = i * 4
+51  : 	t25 = 1
+52  : 	t26 = t25 - 
+53  : 	arr[t24] = t26
+54  : 	goto 47
+55  : 	t27 = 0
+56  : 	t28 = t27 * 4
+57  : 	t29 = 0
+58  : 	arr[t28] = t29
+59  : 	t30 = 1
+60  : 	t31 = t30 * 4
+61  : 	t32 = 0
+62  : 	arr[t31] = t32
+63  : 	t33 = 32
+64  : 	param t33
+65  : 	t34 = call fib, 1
+66  : 	x = t34
+67  : 	t35 = 2
+68  : 	t36 = x % t35
+69  : 	t37 = 1
+70  : 	if t36 == t37 goto 72
+71  : 	goto 77
+72  : 	t38 = 100
+73  : 	if x > t38 goto 75
+74  : 	goto 77
+75  : 	res = c
+76  : 	goto 78
+77  : 	res = d
+78  : 	t39 = "Conditionals checked"
+79  : 	param t39
+80  : 	t40 = call printStr, 1
+81  : 	t41 = 0
+82  : 	return t41
+83  : Function end: main
